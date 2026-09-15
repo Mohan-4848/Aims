@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../common/Button';
+import {photo} from "./src/assets/t3.jpg";
 
 export const Hero: React.FC = () => {
   return (
@@ -35,7 +36,7 @@ export const Hero: React.FC = () => {
         <div className="hero-visual reveal">
           <div className="hero-card">
             <img
-              src="./src/assets/t3.jpg"
+              src={photo}
               alt="Arundathi Institute of Medical Sciences campus"
             />
           </div>
