@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../common/Button';
-import {photo} from "./src/assets/t3.jpg";
+import photo from "../../src/assets/t3.jpg";
 
 export const Hero: React.FC = () => {
   return (
