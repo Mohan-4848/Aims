@@ -1,0 +1,89 @@
+/* Founder Section Layout */
+.founder-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* Image Styling (Matching the theme's soft rounded corners) */
+.founder-image {
+  position: relative;
+}
+
+.founder-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+}
+
+/* Content & Typography */
+.founder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Replaces the orange SVG with a themed typography quote mark */
+.quote-icon {
+  font-family: 'Manrope', sans-serif;
+  font-size: 90px;
+  line-height: 0.7;
+  color: var(--teal);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.quote-text {
+  font-size: 18px;
+  color: var(--ink);
+  line-height: 1.7;
+  margin: 0 0 35px;
+  font-weight: 500;
+}
+
+/* Replaces the orange text with the theme's Teal/Navy */
+.founder-name {
+  font-family: 'Manrope', sans-serif;
+  color: var(--teal);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin: 0 0 4px;
+}
+
+.founder-title {
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 950px) {
+  .founder-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+  
+  .founder-image img {
+    max-height: 450px;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 680px) {
+  .quote-text {
+    font-size: 16px;
+  }
+  .founder-content {
+    padding: 0;
+  }
+}

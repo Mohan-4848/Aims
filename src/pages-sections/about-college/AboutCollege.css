@@ -1,0 +1,105 @@
+/* Container & Grid Layout */
+.about-institution {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.about-inst-grid {
+  display: grid;
+  /* Image on left (0.9fr), Text on right (1.1fr) */
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+/* Typography (Reusing established theme) */
+.section-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -1.4px;
+  color: var(--navy);
+  margin: 0 0 30px;
+  font-weight: 800;
+}
+
+.about-text-content p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Image Styling */
+.about-image-content {
+  position: relative;
+}
+
+.inst-main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+  display: block;
+  position: relative;
+  z-index: 2;
+  object-fit: cover;
+}
+
+/* Gradient decorative square behind the image */
+.about-image-content::after {
+  content: '';
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, var(--teal) 0%, var(--navy) 100%);
+  border-radius: 24px;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* Custom List Styling for the Mission Card */
+.vm-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vm-list li {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.vm-list li::before {
+  content: '•';
+  color: var(--teal);
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 950px) {
+  .about-inst-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  /* Swap order on mobile so text appears before image */
+  .about-text-content {
+    order: -1;
+  }
+
+  .about-image-content::after {
+    display: none; 
+  }
+}

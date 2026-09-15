@@ -1,0 +1,148 @@
+/* Container & Layout */
+.management-section {
+  padding: 100px 0;
+  background: var(--cream);
+}
+
+.management-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.management-header .section-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(36px, 4.5vw, 52px);
+  color: var(--navy);
+  margin: 0 0 15px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.management-header .section-subtitle {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Grid Layout for the Tables */
+.management-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* Card Wrapper for Tables */
+.table-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 35px 40px;
+  box-shadow: 0 12px 35px rgba(8, 44, 76, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Teal Accent Line on top of cards */
+.table-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--navy) 0%, var(--teal) 100%);
+}
+
+.table-title {
+  font-family: 'Manrope', sans-serif;
+  color: var(--navy);
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px dashed var(--line);
+}
+
+/* Modern Table Styling */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.aims-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.aims-table th {
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 15px 15px 15px;
+  border-bottom: 2px solid var(--line);
+}
+
+.aims-table td {
+  padding: 18px 15px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+.aims-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.aims-table tbody tr:hover td {
+  background: var(--mint);
+}
+
+/* Utility Classes for Typography inside Tables */
+.font-bold {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.text-teal {
+  color: var(--teal) !important;
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.contact-link {
+  color: var(--teal);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--navy);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 950px) {
+  .management-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 680px) {
+  .table-card {
+    padding: 25px 20px;
+  }
+  
+  .aims-table th,
+  .aims-table td {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,66 @@
+/* Stats Section Wrapper */
+.stats-banner {
+  padding: 60px 0;
+  background-color: var(--mint); /* Uses the soft mint background from the theme */
+}
+
+/* Grid Layout */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Individual Stat Cards */
+.stat-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(8, 44, 76, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+/* Typography */
+.stat-number {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(36px, 4vw, 48px); /* Scales smoothly on different screens */
+  font-weight: 800;
+  color: var(--teal);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  display: block;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 950px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-card {
+    padding: 30px 20px;
+  }
+}
